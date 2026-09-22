@@ -277,7 +277,7 @@ class IntervalState:
             t.Tuple[str, str, t.Optional[str], t.Optional[str]], SnapshotIntervals
         ] = {}
 
-        filters = (
+        filters: t.List[t.Optional[exp.Condition]] = (
             list(
                 snapshot_name_version_filter(
                     self.engine_adapter,
